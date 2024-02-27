@@ -20,6 +20,12 @@ func TestHello(t *testing.T) {
     want := "Hola, Elodie"
     assetCorrectMessage(t, got, want)
   })
+
+  t.Run("in French", func(t *testing.T) {
+    got := Hello("Jean", "French") 
+    want := "Bonjour, Jean"
+    assetCorrectMessage(t, got, want)
+  })
 }
 
 func assetCorrectMessage(t testing.TB, got, want string) {
