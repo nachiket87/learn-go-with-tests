@@ -3,13 +3,13 @@ package main
 import "testing"
 
 func TestPerimeter(t *testing.T) {
-  rectangle := Rectangle{10.0, 10.0}
-  want := 40.0
-  got := Perimeter(rectangle)
+	rectangle := Rectangle{10.0, 10.0}
+	want := 40.0
+	got := Perimeter(rectangle)
 
-  if got != want {
-    t.Errorf("got %.2f want %.2f", got, want)
-  }
+	if got != want {
+		t.Errorf("got %.2f want %.2f", got, want)
+	}
 
 }
 
