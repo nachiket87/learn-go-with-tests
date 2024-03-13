@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"reflect"
 	"testing"
+	"time"
 )
 
 
@@ -13,6 +14,10 @@ const write = "write"
 
 type SpyCountdownOperations struct {
   Calls []string
+}
+
+type SpyTime struct {
+  durationSlept time.Duration
 }
 
 func (s *SpyCountdownOperations) Sleep() {

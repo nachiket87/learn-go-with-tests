@@ -16,6 +16,11 @@ type Sleeper interface {
 
 type DefaultSleeper struct{}
 
+type ConfigurationSleeper struct {
+  duration time.Duration
+  sleep func(time.Duration)
+}
+
 func (d *DefaultSleeper) Sleep() {
 	time.Sleep(1 * time.Second)
 }
