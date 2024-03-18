@@ -6,6 +6,7 @@ import (
 	"testing"
 	"time"
 )
+
 func TestRacer(t *testing.T) {
 
 	slowServer := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
