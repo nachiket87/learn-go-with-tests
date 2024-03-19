@@ -5,15 +5,14 @@ import (
 	"testing"
 )
 
-
 type Profile struct {
-  Age int
-  City string
+	Age  int
+	City string
 }
 
 type Person struct {
-  Name string
-  Profile Profile
+	Name    string
+	Profile Profile
 }
 
 func TestWalk(t *testing.T) {
@@ -47,14 +46,22 @@ func TestWalk(t *testing.T) {
 		},
 		{
 			"nested fields",
-      Person{"Chris", Profile{33, "London"}},
+			Person{"Chris", Profile{33, "London"}},
 			[]string{"Chris", "London"},
 		},
-    {
-      "pointer to value",
-      &Person{"Chris", Profile{33, "London"}},
-      []string{"Chris", "London"},
-    },
+		{
+			"pointer to value",
+			&Person{"Chris", Profile{33, "London"}},
+			[]string{"Chris", "London"},
+		},
+		{
+			"slices",
+			[]Profile{
+				{33, "London"},
+				{36, "Paris"},
+			},
+			[]string{"London", "Paris"},
+		},
 	}
 
 	for _, test := range cases {
