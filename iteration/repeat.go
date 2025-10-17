@@ -1,17 +1,14 @@
-package main
+package iteration
 
-import "fmt"
+import "strings"
+
+const repeatCount = 5
 
 func Repeat(a string) string {
 
-	var repeated string
-	for range 5 {
-		repeated += a
+	var repeated strings.Builder
+	for range repeatCount {
+		repeated.WriteString(a)
 	}
-	return repeated
-}
-
-func main() {
-	fmt.Println(Repeat("n"))
-
+	return repeated.String()
 }
