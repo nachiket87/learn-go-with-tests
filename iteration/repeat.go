@@ -1,4 +1,6 @@
-package iteration
+package main
+
+import "fmt"
 
 func Repeat(a string) string {
 
@@ -7,4 +9,9 @@ func Repeat(a string) string {
 		repeated += a
 	}
 	return repeated
+}
+
+func main() {
+	fmt.Println(Repeat("n"))
+
 }
