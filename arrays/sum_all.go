@@ -1,5 +1,12 @@
 package main
 
 func SumAll(numbersToSum ...[]int) []int {
-	return []int{3, 9}
+	lengthOfNumbers := len(numbersToSum)
+	sums := make([]int, lengthOfNumbers)
+
+	for i, numbers := range numbersToSum {
+		sums[i] = Sum(numbers)
+	}
+
+	return sums
 }
